@@ -1,6 +1,7 @@
 <?php
 header('Content-Type: application/json');
-include "db.php";
+// include "db.php";
+include "heroku_db.php";
 
 
 $studentName = $_POST['studentName'];
