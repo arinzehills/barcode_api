@@ -10,7 +10,7 @@ $paid =  $_POST['paid'];
 $department =  $_POST['department'];
 
 $stmt = $db->prepare("INSERT INTO student (studentName,level,matNumber,paid, department) VALUES (?, ?,?, ?,?)");
-$result = $stmt->execute([$studentName, $level,$matNumber, $paid, $department]);
+$result = $stmt->execute(['$studentName', '$level','$matNumber',' $paid', '$department']);
 
 echo json_encode([
 'success' => $result
